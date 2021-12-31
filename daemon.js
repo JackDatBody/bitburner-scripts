@@ -219,8 +219,7 @@ export async function main(ns) {
         { name: "gangs.js", tail: true, shouldRun: () => 2 in dictSourceFiles }, // Script to create manage our gang for us
         { name: "work-for-factions.js", shouldRun: () => 4 in dictSourceFiles, args: ['--fast-crimes-only', '--no-coding-contracts'] }, // Script to manage how we use our "focus" work
         { name: "spend-hacknet-hashes.js", shouldRun: () => 9 in dictSourceFiles, args: ["-v"] }, // Always have this running to make sure hashes aren't wasted
-        { name: "sleeve.js", tail: true, shouldRun: () => 10 in dictSourceFiles }, // Script to create manage our sleeves for us
-        { interval: 111000, name: "host-manager.js", requiredServer: "home", shouldRun: () => !shouldReserveMoney() },
+        { name: "sleeve.js", tail: true, shouldRun: () => 10 in dictSourceFiles }, // Script to create manage our sleeves for u
     ];
     asynchronousHelpers.forEach(helper => helper.isLaunched = false);
     asynchronousHelpers.forEach(helper => helper.requiredServer = "home"); // All helpers should be launched at home since they use tempory scripts, and we only reserve ram on home
