@@ -3,7 +3,7 @@ import {
     scanAllServers, hashCode, disableLogs, log as logHelper,
     getNsDataThroughFile_Custom, runCommand_Custom, waitForProcessToComplete_Custom,
     tryGetBitNodeMultipliers_Custom, getActiveSourceFiles_Custom,
-    getFnRunViaNsExec, getFnIsAliveViaNsPs
+    getFnRunViaNsExec, getFnIsAliveViaNsPs, host-manager
 } from './helpers.js'
 
 // the purpose of the daemon is: it's our global starting point.
